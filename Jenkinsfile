@@ -31,8 +31,8 @@ pipeline {
 
         stage('Deployment') {
             steps {
-                sh 'sshpass -p "wiculty" scp target/gamutkart.war wiculty@172.17.0.2:/home/wiculty/Distros/apache-tomcat-9.0.87/webapps'
-                sh 'sshpass -p "wiculty" ssh wiculty@172.17.0.2 "/home/wiculty/Distros/apache-tomcat-9.0.87/bin/startup.sh"'
+                sh 'sshpass -p "wiculty" scp target/gamutkart.war wiculty@10.88.0.1:/home/lokesh/Templates/gamutkart2/apache-tomcat-8.5.38/webapps'
+                sh 'sshpass -p "wiculty" ssh wiculty@10.88.0.1 "/home/lokesh/Templates/gamutkart2/apache-tomcat-8.5.38/bin/startup.sh"'
             }
         }
     }
